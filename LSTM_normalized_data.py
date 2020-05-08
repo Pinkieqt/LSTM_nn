@@ -1,15 +1,13 @@
 """
-Ressouces:
+Guides:
     [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf)
     [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
     [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
-Repository: https://github.com/ar-ms/lstm-mnist
-
-
-# Page : https://github.com/curiousily/Deep-Learning-For-Hackers/blob/master/13.time-series-human_activity_recognition.ipynb
-# Page : https://www.curiousily.com/posts/time-series-classification-for-human-activity-recognition-with-lstms-in-keras/#evaluation
-# Ostatní : https://github.com/curiousily/Deep-Learning-For-Hackers
-# bidirectional lstm: https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/
+    [Time Series Human Activity] (https://github.com/curiousily/Deep-Learning-For-Hackers/blob/master/13.time-series-human_activity_recognition.ipynb)
+    [Time Series Human Activity] (https://www.curiousily.com/posts/time-series-classification-for-human-activity-recognition-with-lstms-in-keras/#evaluation)
+    [All guides] (https://github.com/curiousily/Deep-Learning-For-Hackers)
+    [Bidirectional LSTM] (https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
+    [Rep] https://github.com/ar-ms/lstm-mnist
 """
 
 # Imports
@@ -50,16 +48,8 @@ class LSTMnn:
         tmp = 11146  # first data training size
         for i in range(ds.shape[0]):
             # hardcoded
-            # if(self.ds.loc[i, 'D8'] > 17 and self.ds.loc[i, 'D10'] > 42 and self.ds.loc[i, 'D12'] < -42):
-            # if(data.loc[i, 'D8'] > 153 and data.loc[i, 'D10'] > 42 and data.loc[i, 'D12'] < 100):
-            # if(data.loc[i, 'D8'] > 0.011 and data.loc[i, 'D10'] > 0.015 and data.loc[i, 'D12'] < -0.05):
             if(i >= 9330 and i <= 9468 or i >= 9520 and i <= 10066
-               or i >= 10110 and i <= 10345 or i >= 10370 and i <= 10516 or i >= 10550 and i <= 10626
-               or i >= tmp + 6210 and i <= tmp + 6566 or i >= tmp + 6582 and i <= tmp + 6811
-               or i >= tmp + 6825 and i <= tmp + 6913 or i >= tmp + 6940 and i <= tmp + 6969
-               or i >= tmp + 6981 and i <= tmp + 7175 or i >= tmp + 7191 and i <= tmp + 7243
-               or i >= tmp + 7268 and i <= tmp + 7359 or i >= tmp + 7414 and i <= tmp + 7511
-               or i >= tmp + 7535 and i <= tmp + 7568 or i >= tmp + 7713 and i <= tmp + 7741):
+               or i >= 10110 and i <= 10345 or i >= 10370 and i <= 10516 or i >= 10550 and i <= 10626):
                 # anomaly
                 Y.append([0, 1])
             else:
@@ -170,7 +160,6 @@ class LSTMnn:
 
 def main():
     train = False
-    predict = False
 
     features = 14
     lookback = 30
