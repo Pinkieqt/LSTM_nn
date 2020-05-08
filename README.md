@@ -19,13 +19,13 @@ Video jsem poté "rozsekal" pomocí skriptu [framesFromVideo.py](https://github.
 
 Poté jsem vygeneroval jednotlivé obličejové body pro jeden zdroj snímků do .CSV souboru pomocí knihovny OpenPose. ([C++ kod](https://github.com/Pinkieqt/LSTM_nn/blob/master/OpenPose/MyFaceImplementation.cpp))
 
-Tento .CSV soubor jsem načetl pomocí [DatasetParseru.py](https://github.com/Pinkieqt/LSTM_nn/blob/master/Dataset_Parser.py), přes který jsem vypočítal jednotlivé vzdálenosti D1-D14 a uložil je pro každý snímek do dalšího separátního .CSV souboru.
+Tento .CSV soubor jsem načetl pomocí [DatasetParseru.py](https://github.com/Pinkieqt/LSTM_nn/blob/master/Dataset_Parser.py), přes který jsem vypočítal jednotlivé vzdálenosti D1-D14 a uložil je pro každý snímek do dalšího separátního .CSV souboru. Vzdálenosti D1-D14 jsem určil podle osobního názoru jako vzdálenosti, které by se při kýchání mohly měnit (zvětšovat, zmenšovat). Porovnávat jednotlivé polohy bodů by podle mě by nebylo korektní, jelikož každé otočení hlavy by znamenalo velké vychýlení mezi "normálními" pozicemi obličejových bodů a těch vychýlených.
 
 Jednotlivé vzdálenosti D1-D14 jsou zvýrazněny na následném obrázku.
 
 ![openpose keypoints](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/keypoints_face.png)
 
-Tímto postupem jsem získal veškeré potřebné data z natočeného videa.
+Tímto postupem jsem získal veškeré potřebné data (features) z natočeného videa.
 
 ## Visualizace dat
 
@@ -50,9 +50,11 @@ A data po normalizaci: (modré = pohled zepředu, oranžové = pohled z boku)
 
 
 ![after normalization](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/data%20after%20normalization.png)
+
 Ovšem po normalizaci, spojení těchto dvou datasetů a následném trénování modelu jsem získával někdy rozumný odhad, ale spíše ne zrovna rozumný odhad.
 
 Odhad na testovacím videu po normalizaci, spojení a natrénování:
+
 ![normalized data predict](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/normalized%20data.png)
 
 Nakonec jsem usoudil, že trénovací data (i po normalizaci) nemohou pocházet z úplně jiných zdrojů, nýbrž velmi podobných.
@@ -74,4 +76,5 @@ Modely jsem zkoušel trénovat s různými argumenty (zmenšit/zvětšit batch-s
 ###### Videa k dispozici zde: https://github.com/Pinkieqt/LSTM_nn/tree/master/Media/Videos
 
 ![Coughing](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/test1.png)
+![Movement](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/test3.png)
 
