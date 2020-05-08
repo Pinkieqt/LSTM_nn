@@ -36,6 +36,8 @@ Visualizaci dat jsem prováděl pomocí třídy [Plotter.py](https://github.com/
 ###### Trénovací data: [Front view](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_new.csv), [Side view](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_side.csv), [Normalized and combined Front and Side view](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/train_front_and_side.csv)
 ###### Testovací data: [Front view test](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_front_test.csv), [Front view test 2](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_front_test_2.csv), [Front view test (only normal data)](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_normal.csv), [GoPro Side test](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/gopro.csv)
 
+Prvně jsem zkoušel LSTM Autoencoder, ovšem po několika nepodařených pokusech jsem přesel na "Supervised" metodu s tím, že jsem se pokusil podle vlastního uvážení určit, která data ze zdroje jsou "normální" a kdy v datech "kašlu/kýchám".  
+
 Model jsem trénoval na datech ze souboru [iphone_new.csv](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_new.csv), kdy byla kamera umístěna na palubní desce přesně v rovině s obličejem. Po mnoha pokus-omyl jsem jakž takž dosáhl nějakého rozumného výsledku. Ovšem po testování tohoto modelu na datech z [iphone_side.csv](https://github.com/Pinkieqt/LSTM_nn/blob/master/Final_datasets/iphone_side.csv), kde kamera natáčela z úhlu, neprokazoval žádné rozumné výsledky.
 
 Zkusil jsem tedy všechny data normalizovat. Normalizoval jsem každý obrázek a jeho obličejové body/data pomocí vzorce *normalisedData = (data - mean) / var*. 
