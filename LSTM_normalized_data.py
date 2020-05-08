@@ -49,7 +49,12 @@ class LSTMnn:
         for i in range(ds.shape[0]):
             # hardcoded
             if(i >= 9330 and i <= 9468 or i >= 9520 and i <= 10066
-               or i >= 10110 and i <= 10345 or i >= 10370 and i <= 10516 or i >= 10550 and i <= 10626):
+               or i >= 10110 and i <= 10345 or i >= 10370 and i <= 10516 or i >= 10550 and i <= 10626)
+                or i >= tmp + 6210 and i <= tmp + 6566 or i >= tmp + 6582 and i <= tmp + 6811
+                or i >= tmp + 6825 and i <= tmp + 6913 or i >= tmp + 6940 and i <= tmp + 6969
+                or i >= tmp + 6981 and i <= tmp + 7175 or i >= tmp + 7191 and i <= tmp + 7243
+                or i >= tmp + 7268 and i <= tmp + 7359 or i >= tmp + 7414 and i <= tmp + 7511
+                or i >= tmp + 7535 and i <= tmp + 7568 or i >= tmp + 7713 and i <= tmp + 7741):
                 # anomaly
                 Y.append([0, 1])
             else:
