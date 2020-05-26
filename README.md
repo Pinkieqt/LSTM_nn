@@ -55,7 +55,7 @@ Ovšem po normalizaci, spojení těchto dvou datasetů a následném trénován�
 
 Odhad na testovacím videu po normalizaci, spojení a natrénování:
 
-![normalized data predict](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/normalized%20data.png)
+![normalized data predict](https://github.com/Pinkieqt/LSTM_nn/blob/master/Media/final%20test_normalized_labeled.png)
 
 Nakonec jsem usoudil, že trénovací data (i po normalizaci) nemohou pocházet z úplně jiných zdrojů, nýbrž velmi podobných.
 
