@@ -108,4 +108,18 @@ def viewClasses(source, dataframe):
                 dataframe.set_value(i, "Talking", -6)
             else:
                 dataframe.set_value(i, "Normal", -3)
+    elif (source == "iphone_front_test"):
+        dataframe["Coughing"] = np.nan
+        dataframe["Head moving"] = np.nan
+        dataframe["Talking"] = np.nan
+        dataframe["Normal"] = np.nan
+        for i in range(len(dataframe)):
+            if (i > 771 and i < 872 or i > 881 and i < 1085 or i > 1099 and i < 1490):
+                dataframe.set_value(i, "Coughing", -5)
+            elif (i > 1550 and i < 1980 or i > 2129 and i < 2245 or i > 2267 and i < 2660):
+                dataframe.set_value(i, "Head moving", -4)
+            elif (i > 2671 and i < 3450):
+                dataframe.set_value(i, "Talking", -6)
+            else:
+                dataframe.set_value(i, "Normal", -3)
     return dataframe
