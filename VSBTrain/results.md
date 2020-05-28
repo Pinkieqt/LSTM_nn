@@ -15,7 +15,7 @@ Tak jsem zkusil hledat v datech proč tomu tak je, jelikož na mých datech lze 
 Na tomto rozdílu jsem tedy předtím taky pracoval a podle toho se snažil ty data vyhodnotit.
 
 Ovšem trénovací data, která jste mi zaslal, jsou viditelně o mnoho komplexnější. 
-Rozdíly mezi kašláním a normální aktivitou tam nejsou tak viditelné, což bude hlavní důvod proč má metoda na těchto datech asi nefungovala.
+Rozdíly mezi kašláním a normální aktivitou tam nejsou tak viditelné, což bude hlavní důvod proč má metoda na těchto datech nefungovala podle očekávání z předešlých výsledků.
 
 ![train1](https://github.com/Pinkieqt/LSTM_nn/blob/master/VSBTrain/Train_1_990_1035.png)
 ![train1](https://github.com/Pinkieqt/LSTM_nn/blob/master/VSBTrain/Train_1_D10_D12.png)
