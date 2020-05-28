@@ -1,9 +1,9 @@
 # Zkouška mé metody na datech z VŠB
 
 Zkusil jsem svou metodu na datech z následujích složek:
-train 1 - složka _133148
-train 2 - složka _132752
-train 3 - složka _131842
+train 1 - složka _133148,
+train 2 - složka _132752,
+train 3 - složka _131842,
 test 1 - 131413
 
 Zkusil jsem jak boční úhel tak pohled zepředu, ale výsledky nebyly moc pozitivní. Často nerozpoznal kašel vůbec, jestli jsem na jednom modelu naměřil kolem 20% úspěšnosti rozpoznání kašle, tak zase při klasickém otáčení hlavy měl procenta o dost vyšší a ostatní aktivita na tom byla podobně jako kašel.
